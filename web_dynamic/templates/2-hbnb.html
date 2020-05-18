@@ -10,10 +10,11 @@
       <link rel="icon" href="../static/images/icon.png?{{ cache_id }}"/>
       <title>HBnB</title>
       <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
-      <script src="../static/scripts/1-hbnb.js?{{ cache_id }}"></script>
+      <script src="../static/scripts/2-hbnb.js?{{ cache_id }}"></script>
   </head>
   <body>
   <header>
+      <div id="api_status"></div>
       <div class="logo"></div>
   </header>
   <div class="container">
@@ -60,10 +61,8 @@
                   </div>
                   <div class="information">
                       <div class="max_guest">{{ place.max_guest }} Guest{% if place.max_guest != 1 %}s{% endif %}</div>
-                      <div class="number_rooms">{{ place.number_rooms }} Bedroom{% if place.number_rooms != 1 %}
-                          s{% endif %}</div>
-                      <div class="number_bathrooms">{{ place.number_bathrooms }} Bathroom
-                          {% if place.number_bathrooms != 1 %}s{% endif %}</div>
+                      <div class="number_rooms">{{ place.number_rooms }} Bedroom{% if place.number_rooms != 1 %}s{% endif %}</div>
+                      <div class="number_bathrooms">{{ place.number_bathrooms }} Bathroom{% if place.number_bathrooms != 1 %}s{% endif %}</div>
                   </div>
                   <div class="user">
                       <b>Owner:</b> {{ place.user.first_name }} {{ place.user.last_name }}
